@@ -1,0 +1,138 @@
+.app {
+  max-width: 480px;
+  margin: 64px auto;
+  padding: 0 16px;
+}
+
+.app h1 {
+  margin: 0 0 24px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Form tambah */
+.add-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.add-form input {
+  flex: 1;
+}
+
+.add-form input,
+.edit-input {
+  padding: 8px 10px;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.add-form input::placeholder {
+  color: var(--muted);
+}
+
+/* Tombol utama: kotak solid satu warna */
+button {
+  padding: 8px 14px;
+  font: inherit;
+  color: var(--bg);
+  background: var(--fg);
+  border: 1px solid var(--fg);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: var(--muted);
+  background: transparent;
+  border-color: var(--line);
+  cursor: not-allowed;
+}
+
+/* Tombol sekunder: hanya teks */
+button.ghost,
+button.danger {
+  padding: 4px 6px;
+  color: var(--muted);
+  background: none;
+  border: none;
+}
+
+button.ghost:hover {
+  color: var(--fg);
+}
+
+button.danger:hover {
+  color: var(--danger);
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+/* Daftar: baris dipisah garis, tanpa kartu */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.todo input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--fg);
+}
+
+.todo .text {
+  flex: 1;
+  word-break: break-word;
+  cursor: text;
+}
+
+.todo.done .text {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 4px 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 2px;
+}
+
+/* Pesan */
+.error {
+  margin-bottom: 16px;
+  padding-left: 10px;
+  color: var(--danger);
+  border-left: 3px solid var(--danger);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: 0.875rem;
+}
